@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
         setIsNavOpen((prev) => !prev);
     };
     return (
-        <nav className="flex justify-between items-center p-4 bg-gray-800 text-white">
+        <nav className="flex justify-between items-center p-4 border-b ">
             {/* Left side - Logo */}
             <div className="text-xl font-semibold">MyBrand</div>
 
@@ -36,7 +36,7 @@ const Navbar: React.FC = () => {
                     {isNavOpen ? (
                         <X className="w-6 h-6 text-white" />
                     ) : (
-                        <Menu className="w-6 h-6 text-white" />
+                        <Menu className="w-6 h-6 " />
                     )}
                 </button>
             </div>
