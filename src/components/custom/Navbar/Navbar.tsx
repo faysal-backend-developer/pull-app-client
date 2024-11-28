@@ -16,7 +16,6 @@ const Navbar: React.FC = () => {
         }
     ]
     const [isNavOpen, setIsNavOpen] = useState(false);
-
     // Toggle the menu open/close on mobile
     const toggleNav = () => {
         setIsNavOpen((prev) => !prev);
@@ -53,7 +52,7 @@ const Navbar: React.FC = () => {
                         {/* Display X icon when menu is open, Menu icon when closed */}
                         {isNavOpen ? (
                             <X className="w-6 h-6 text-white" />
-                        ) : ""}
+                        ) : <Menu className="w-6 h-6 opacity-0 " />}
                     </button>
                 </div>
                 <div className=' flex flex-col justify-center items-center h-full'>
