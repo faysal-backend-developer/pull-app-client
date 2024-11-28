@@ -1,2 +1,2 @@
-# -*- Pull App -*-
+# ** Pull App **
 
