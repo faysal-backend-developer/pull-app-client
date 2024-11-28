@@ -1,4 +1,2 @@
-##PULL-APP-Client
-
-# -*- coding: utf-8 -*-
+## -*- coding: utf-8 -*-
 
