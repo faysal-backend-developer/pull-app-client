@@ -10,7 +10,7 @@ export default function Home() {
         <h1>Left Side</h1>
       </div>
       <div className="lg:col-span-3 md:col-span-2">
-      
+      <h1>content</h1>
       </div>
       <div className="lg:col-span-1 hidden lg:block">
         <LeaderBoard/>
