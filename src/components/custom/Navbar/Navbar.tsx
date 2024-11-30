@@ -1,7 +1,7 @@
 // components/Navbar.tsx
 "use client"
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react'; // Import Lucide icons for Menu and X
+import { Menu, X } from 'lucide-react'; 
 import Link from 'next/link';
 
 const Navbar: React.FC = () => {
@@ -21,11 +21,25 @@ const Navbar: React.FC = () => {
         setIsNavOpen((prev) => !prev);
     };
     return (
-        <nav className="flex justify-between items-center p-4 border-b ">
-            {/* Left side - Logo */}
-            <div className="text-xl font-semibold">MyBrand</div>
+        <nav className="flex justify-between items-center py-4">
+            
 
             {/* Right side - Mobile menu icon (hidden on desktop, shown on mobile) */}
+            <div className='flex justify-start items-center gap-4'>
+                {/* Left side - Logo */}
+            <div className="text-xl font-semibold">MyBrand</div>
+           
+            {/* Desktop menu (always visible on desktop) */}
+            <ul className='hidden lg:flex space-x-6'>
+                {
+                    routers.map((el, i) => {
+                        return <li onClick={() => setIsNavOpen(false)} key={i}> <Link href={el?.path}>{el?.name}</Link> </li>
+                    })
+                }
+            </ul>
+            </div>
+
+
             <div className="block lg:hidden">
                 <button
                     onClick={toggleNav}
@@ -63,16 +77,14 @@ const Navbar: React.FC = () => {
                             })
                         }
                     </ul>
+
+                    <h1>login</h1>
                 </div>
             </div>
-            {/* Desktop menu (always visible on desktop) */}
-            <ul className='hidden lg:flex space-x-6'>
-                {
-                    routers.map((el, i) => {
-                        return <li onClick={() => setIsNavOpen(false)} key={i}> <Link href={el?.path}>{el?.name}</Link> </li>
-                    })
-                }
-            </ul>
+            <div className='hidden lg:flex'>
+                <h1>Login</h1>
+            </div>
+
         </nav>
     );
 };
